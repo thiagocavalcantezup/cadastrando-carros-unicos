@@ -33,7 +33,7 @@ public class Carro {
     @Max(2099)
     private Integer ano;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 7)
     @Pattern(regexp = "[A-Z]{3}[0-9][0-9A-Z][0-9]{2}")
     private String placa;
 
