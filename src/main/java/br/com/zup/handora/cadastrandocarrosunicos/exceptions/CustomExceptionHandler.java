@@ -119,6 +119,16 @@ public class CustomExceptionHandler {
             httpStatus = HttpStatus.UNPROCESSABLE_ENTITY;
 
             switch (constraintName.toUpperCase()) {
+                case "UK_CARRO_PLACA":
+                    mensagemGeral = "Houve um problema com a sua requisição.";
+                    mensagemEspecifica = "O carro com essa placa já está cadastrado.";
+                    break;
+
+                case "UK_CARRO_CHASSI":
+                    mensagemGeral = "Houve um problema com a sua requisição.";
+                    mensagemEspecifica = "O carro com esse chassi já está cadastrado.";
+                    break;
+
                 default:
                     mensagemEspecifica = "Violação de restrição dos dados.";
                     break;
